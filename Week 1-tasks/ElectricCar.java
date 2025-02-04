@@ -1,3 +1,7 @@
+public class DisplayingValues {
+	public final static String BATTERY_CHARGING=" THE BATTERY IS BEING CHARGED";
+	public final static String OVERRIDE_METHOD=" OVERRIDDEN ENGINE START METHOD";
+}
 //Subclass ElectricCar extends Car
 class ElectricCar extends Car {
 	private int batteryRange;
