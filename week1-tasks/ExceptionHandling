@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class ExceptionHandlingExample {
+	public static void main(String args[]) {
+
+		processInput();
+	}
+
+	private static void processInput() {
+		Scanner sc = new Scanner(System.in);
+		try {
+			@SuppressWarnings("unused")
+			int reciprocal = 0;
+			System.out.println(DisplayingValues.INPUT_NUMBER);
+
+			int inputNumber = sc.nextInt();
+			reciprocal = 1 / inputNumber;
+
+			System.out.println(DisplayingValues.RECIPROCAL_OF_A_NUMBER + " - " + "1/" + inputNumber);
+
+		}
+
+		catch (ArithmeticException e) {
+			System.out.println(DisplayingValues.PROVIDE_VALID_NUMBER);
+		} finally {
+			sc.close();
+		}
+	}
+}
