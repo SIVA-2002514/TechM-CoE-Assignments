@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Magazine/Online Newspaper</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Magazine & Online NewsPaper</title>
+    <link rel="icon" type="image/x-icon" href="images.jpg">
+
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---css style-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>E-Magazine/Online Newspaper</h1>
+      
+
+      <div class="inputSearch desktop">
+        <form id="searchForm">
+          <input type="text" placeholder="Type to search..." id="searchInput" />
+          <span> <i class="fa-solid fa-search"></i></span>
+        </form>
+      </div>
+      <nav class="desktop">
+        <ul>
+        
+          <li onclick="Search('politics')">Politics</li>
+          <li onclick="Search('tech')">Technology</li>
+          <li onclick="Search('food')">Food Trends</li>
+          <li onclick="Search('movies')">Movies & Entertainment</li>
+          <li onclick="Search('business')">Business & Economics</li>
+        </ul>
+      </nav>
+
+      <div class="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!------>
+      <div class="mobile hidden">
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-            </ul>
+          <ul>
+            <li onclick="Search('politics')">Politics</li>
+            <li onclick="Search('tech')">Technology</li>
+            <li onclick="Search('food')">Food Trends/li>
+            <li onclick="Search('movies')"> Movies & Entertainment</li>
+            <li onclick="Search('business')">Business & Economics</li>
+          </ul>
         </nav>
-        <input type="text" id="search" placeholder="Search articles...">
+        <div class="inputSearch">
+        <form id="searchFormMobile" id="searchInputMobile">
+          <input type="text" placeholder="Type to search..." />
+          <span> <i class="fa-solid fa-search"></i></span>
+        </div>
+        </form>
+      </div>
     </header>
 
-    <section id="home">
-        <div class="featured-news">
-            <h2>Featured News</h2>
-            <div class="articles">
-                <div class="article" data-title="Tech Innovations in 2025" data-content="Advancements in AI, quantum computing, and medical technology are shaping the future.">
-                    <img src="https://via.placeholder.com/300x200?text=Tech+Innovations" alt="Tech Innovations">
-                    <h3>Tech Innovations in 2025</h3>
-                    <p>Exciting developments in AI, quantum computing, and medical technologies.</p>
-                </div>
-                <div class="article" data-title="Green Energy Solutions" data-content="Renewable energy, including solar and wind, is becoming more accessible and efficient.">
-                    <img src="https://via.placeholder.com/300x200?text=Green+Energy" alt="Green Energy">
-                    <h3>Green Energy Solutions</h3>
-                    <p>The transition to renewable energy is accelerating worldwide.</p>
-                </div>
-            </div>
-        </div>
+    <!-- main  -->
 
-        <div class="latest-news">
-            <h2>Latest News</h2>
-            <div class="articles">
-                <div class="article" data-title="New Smartphone Released" data-content="A leading tech company has unveiled its latest smartphone with advanced features.">
-                    <img src="https://via.placeholder.com/300x200?text=New+Smartphone" alt="New Smartphone">
-                    <h3>New Smartphone Released</h3>
-                    <p>The latest model boasts improved camera capabilities and longer battery life.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="categories" class="dropdown">
-        <button class="dropbtn">Select Category</button>
-        <div class="dropdown-content">
-            <a href="#category-news" class="category-item" onclick="showCategoryNews('Technology')">Technology</a>
-            <a href="#category-news" class="category-item" onclick="showCategoryNews('Health')">Health</a>
-            <a href="#category-news" class="category-item" onclick="showCategoryNews('Entertainment')">Entertainment</a>
-        </div>
-    </div>
-
-    <div id="category-news">
-        <h2>Category News</h2>
-        <div id="category-content"></div>
-    </div>
-
-    <div id="subscribe">
-        <h3>Subscribe to our Newsletter</h3>
-        <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-    </div>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-content"></p>
-        </div>
-    </div>
+    <main></main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
