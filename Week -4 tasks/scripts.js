@@ -1,33 +1,75 @@
-document.querySelectorAll('.article').forEach(article => {
-    article.addEventListener('click', function() {
-        const title = this.getAttribute('data-title');
-        const content = this.getAttribute('data-content');
-        document.getElementById('modal-title').textContent = title;
-        document.getElementById('modal-content').textContent = content;
-        document.getElementById('modal').style.display = "block";
-    });
-});
+const API_KEY = "499d03534f224e8890dcd1f95376001c"
+const url = "https://newsapi.org/v2/everything?q="
 
-document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('modal').style.display = "none";
-});
 
-function showCategoryNews(category) {
-    let categoryNews = '';
 
-    if (category === 'Technology') {
-        categoryNews = `
-            <div class="article">
-                <h3>AI in 2025: The Future of Artificial Intelligence</h3>
-                <p>Discover how AI is expected to revolutionize various industries.</p>
-            </div>`;
-    } else if (category === 'Health') {
-        categoryNews = `
-            <div class="article">
-                <h3>Telemedicine: The Future of Healthcare</h3>
-                <p>Telemedicine is providing easier access to healthcare worldwide.</p>
-            </div>`;
+async function fetchData(query){
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`)
+    const data = await res.json()
+    return data
+}
+fetchData("all").then(data => renderMain(data.articles))
+
+//menu btn
+let mobilemenu = document.querySelector(".mobile")
+let menuBtn = document.querySelector(".menuBtn")
+let menuBtnDisplay = true;
+
+menuBtn.addEventListener("click",()=>{
+    mobilemenu.classList.toggle("hidden")
+})
+
+
+//render news 
+function renderMain(arr){
+    let mainHTML = ''
+    for(let i = 0 ; i < arr.length ;i++){
+        if(arr[i].urlToImage){
+        mainHTML += ` <div class="card">
+                        <a href=${arr[i].url}>
+                        <img src=${arr[i].urlToImage} lazy="loading" />
+                        <h4>${arr[i].title}</h4>
+                        <div class="publishbyDate">
+                            <p>${arr[i].source.name}</p>
+                            <span>•</span>
+                            <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
+                        </div>
+                        <div class="desc">
+                           ${arr[i].description}
+                        </div>
+                        </a>
+                     </div>
+        `
+        }
     }
 
-    document.getElementById('category-content').innerHTML = categoryNews;
+    document.querySelector("main").innerHTML = mainHTML
 }
+
+
+const searchBtn = document.getElementById("searchForm")
+const searchBtnMobile = document.getElementById("searchFormMobile")
+const searchInputMobile = document.getElementById("searchInputMobile") 
+const searchInput = document.getElementById("searchInput")
+
+searchBtn.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    console.log(searchInput.value)
+
+    const data = await fetchData(searchInput.value)
+    renderMain(data.articles)
+
+})
+searchBtnMobile.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    const data = await fetchData(searchInputMobile.value)
+    renderMain(data.articles)
+})
+
+
+async function Search(query){
+    const data = await fetchData(query)
+    renderMain(data.articles)
+}
+
+
