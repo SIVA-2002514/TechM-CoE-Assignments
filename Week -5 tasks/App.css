@@ -1,0 +1,16 @@
+.game-list {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+  align-items: stretch;
+  padding: 20px;
+}
+
+.game-card {
+  width: 250px; 
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
