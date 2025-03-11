@@ -1,0 +1,22 @@
+.footer {
+  background: linear-gradient(135deg, #121212, #232323);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-content p:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
