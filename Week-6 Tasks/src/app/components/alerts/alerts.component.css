@@ -1,0 +1,12 @@
+.alerts-container {
+    text-align: center;
+  }
+  
+  .alert-card {
+    background: #ff4444;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    color: white;
+  }
+  
