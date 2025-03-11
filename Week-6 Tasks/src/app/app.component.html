@@ -1,0 +1,16 @@
+<h1 class="title">Weather Forecasting Application</h1>
+
+<app-register (registrationSuccess)="handleRegistration()" *ngIf="!isRegistered"></app-register>
+
+<div *ngIf="isRegistered">
+  <nav class="navbar">
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/forecast">Forecast</a></li>
+      <li><a routerLink="/search">Location Search</a></li>
+      <li><a routerLink="/alerts">Alerts</a></li>
+    </ul>
+  </nav>
+ <app-footer></app-footer>
+  <router-outlet></router-outlet>
+</div>

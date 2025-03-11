@@ -1,0 +1,7 @@
+/* Title Styling - Move to Top Center */
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  margin-top: 20px; /* Adjust spacing */
+}
