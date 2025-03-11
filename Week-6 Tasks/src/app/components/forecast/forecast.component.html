@@ -1,0 +1,9 @@
+<div class="forecast-container">
+    <h2>5-Day weather Forecast</h2>
+    <div class="forecast-card" *ngFor="let day of forecastData">
+      <p><strong>{{ day.date }}</strong></p>
+      <p>Temperature: {{ day.temp | temperature }}</p>
+      <p>Condition: {{ day.condition }}</p>
+    </div>
+  </div>
+  

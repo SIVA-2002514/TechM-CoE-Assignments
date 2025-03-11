@@ -1,0 +1,11 @@
+.forecast-container {
+    text-align: center;
+  }
+  
+  .forecast-card {
+    background: #444;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+  }
+  
