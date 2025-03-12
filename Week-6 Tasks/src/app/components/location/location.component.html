@@ -1,0 +1,12 @@
+<div class="location-container">
+    <h2>🌍 weather by Location</h2>
+    <input [(ngModel)]="city" placeholder="🔍 Type a city name...">
+    <button (click)="getLocationweather()">Get weather</button>
+  
+    <div class="location-data" *ngIf="locationData">
+      <p>📍 <strong>City:</strong> {{ locationData.city }}</p>
+      <p>🌡️ <strong>Temperature:</strong> {{ locationData.temp }}°C</p>
+      <p>⛅ <strong>Condition:</strong> {{ locationData.condition }}</p>
+    </div>
+  </div>
+  
