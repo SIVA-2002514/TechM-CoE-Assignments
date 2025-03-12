@@ -1,0 +1,16 @@
+<nav>
+  <ul>
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/search">Search</a></li>
+    <li><a routerLink="/alerts">Alerts</a></li>
+    <li><a routerLink="/forecast">Forecast</a></li>
+    <li>
+      <input 
+        type="text" 
+        placeholder="Search weather..." 
+        [(ngModel)]="searchQuery"
+        (input)="onSearch()"
+      />
+    </li>
+  </ul>
+</nav>
