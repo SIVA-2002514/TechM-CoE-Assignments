@@ -4,7 +4,7 @@ interface Game {
   rating: number;
   released: string;
   genres: { name: string }[];
-    platforms: { platform: { name: string } }[];
+    platforms: { platform: { name: string } }[];//getting the Array of platforms
   }
 
 const GameCard = ({ game }: { game: Game }) => {

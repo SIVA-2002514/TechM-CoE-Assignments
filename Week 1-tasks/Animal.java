@@ -5,7 +5,7 @@ class DisplayingValues {
 //Abstract class Animal
 abstract class Animal {
 
-	// Abstract method makeSound() that must be overridden by subclasses
+	// Abstract method makeSound() that must be overridden by subclasses.
 	public abstract void makeSound();
 }
 
