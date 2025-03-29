@@ -1,0 +1,96 @@
+.register-container {
+  background: linear-gradient(135deg, #121212, #232323);
+  color: #fff;
+  padding: 40px; /* Increased padding for a bigger form */
+  border-radius: 15px;
+  width: 500px; /* Increased width */
+  margin: 60px auto; /* More space from the top */
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #1a1a1a;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #00ffcc;
+  box-shadow: 0px 0px 8px #00ffcc;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.register-btn {
+  display: block;  /* Makes the button a block element */
+  margin: 20px auto; /* Centers the button horizontally */
+  width: 60%; /* Adjust the width for a balanced look */
+  padding: 15px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+.register-btn:hover {
+  
+  background: #00cca3;
+  transform: scale(1.05);
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #28a745;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Added space between Weather Forecasting Application and the form */
+.app-title {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

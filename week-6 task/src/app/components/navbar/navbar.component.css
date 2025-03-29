@@ -1,0 +1,10 @@
+nav input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+  }
+  
