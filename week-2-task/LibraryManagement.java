@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-// Custom Exceptions
+// Custom Exceptions.
 class BookNotFoundException extends Exception {
 	public BookNotFoundException(String message) {
 		super(message);
