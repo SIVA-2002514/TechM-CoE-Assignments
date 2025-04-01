@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>myTraining - UI apps</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="dependencies-locations">adobe/cq60:core.wcm.components.content:2.26.0=maven:com.adobe.cq:core.wcm.components.content:2.26.0:zip,adobe/cq60:core.wcm.components.config:2.26.0=maven:com.adobe.cq:core.wcm.components.config:2.26.0:zip</entry>
+<entry key="created">2025-03-29T10:37:15.433Z</entry>
+<entry key="groupId">com.myTraining</entry>
+<entry key="description">UI apps package for myTraining</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">application</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="dependencies">adobe/cq60:core.wcm.components.content:2.26.0,adobe/cq60:core.wcm.components.config:2.26.0</entry>
+<entry key="cloudManagerTarget">none</entry>
+<entry key="name">myTraining.ui.apps</entry>
+<entry key="artifactId">myTraining.ui.apps</entry>
+<entry key="group">com.myTraining</entry>
+</properties>

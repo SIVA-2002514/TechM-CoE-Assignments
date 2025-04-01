@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Created-By: Maven Integration for Eclipse
+Bundle-Category: myTraining
+Bundle-Description: Core bundle for myTraining
+Bundle-ManifestVersion: 2
+Bundle-Name: myTraining - Core
+Bundle-SymbolicName: myTraining.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.myTraining.core.filters;version="1.0";uses:="javax.s
+ ervlet",com.myTraining.core.listeners;version="1.0";uses:="org.apache.s
+ ling.api.resource.observation",com.myTraining.core.models;version="1.0"
+ ;uses:="javax.annotation,org.apache.sling.api.resource,org.apache.sling
+ .models.annotations,org.apache.sling.models.annotations.injectorspecifi
+ c",com.myTraining.core.schedulers;version="1.0",com.myTraining.core.ser
+ vlets;version="1.0";uses:="javax.servlet,org.apache.sling.api,org.apach
+ e.sling.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;vers
+ ion="[1.27,2)",com.myTraining.core.filters;version="[1.0,2)",com.myTrai
+ ning.core.listeners;version="[1.0,2)",com.myTraining.core.schedulers;ve
+ rsion="[1.0,2)",com.myTraining.core.servlets;version="[1.0,2)",javax.se
+ rvlet;version="[3.1,4)",org.apache.sling.api;version="[2.3,3)",org.apac
+ he.sling.api.request;version="[2.4,3)",org.apache.sling.api.resource;ve
+ rsion="[2.11,3)",org.apache.sling.api.resource.observation;version="[1.
+ 2,2)",org.apache.sling.api.servlets;version="[2.3,3)",org.apache.sling.
+ models.annotations;version="[1.5,2)",org.apache.sling.models.annotation
+ s.injectorspecific;version="[1.1,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.Run
+ nable",osgi.service;objectClass:List<String>="javax.servlet.Filter";use
+ s:="javax.servlet",osgi.service;objectClass:List<String>="javax.servlet
+ .Servlet";uses:="javax.servlet",osgi.service;objectClass:List<String>="
+ org.apache.sling.api.resource.observation.ResourceChangeListener";uses:
+ ="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
+ nt)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=Ja
+ vaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.myTraining.core.filters.LoggingFilter.xm
+ l,OSGI-INF/com.myTraining.core.listeners.SimpleResourceListener.xml,OSG
+ I-INF/com.myTraining.core.schedulers.SimpleScheduledTask.xml,OSGI-INF/c
+ om.myTraining.core.servlets.SimpleServlet.xml
+Sling-Model-Classes: com.myTraining.core.models.HelloWorldModel
+

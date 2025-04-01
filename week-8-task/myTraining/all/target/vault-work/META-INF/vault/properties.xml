@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>myTraining - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2025-03-29T10:37:04.140Z</entry>
+<entry key="groupId">com.myTraining</entry>
+<entry key="name">myTraining.all</entry>
+<entry key="description">All content package for myTraining</entry>
+<entry key="artifactId">myTraining.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.myTraining</entry>
+</properties>

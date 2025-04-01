@@ -1,0 +1,4 @@
+com\myTraining\it\tests\PublishPageValidationIT.class
+com\myTraining\it\tests\GetPageIT.class
+com\myTraining\it\tests\HtmlUnitClient.class
+com\myTraining\it\tests\CreatePageIT.class

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.3.6
+Build-Jdk-Spec: 21
+Implementation-Title: myTraining - All
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.myTraining:myTraining.all:1.0.0-SNAPSHOT
+Content-Package-Description: All content package for myTraining
+Content-Package-Roots: /apps/myTraining-packages,/apps/myTraining-vendor
+ -packages
+
