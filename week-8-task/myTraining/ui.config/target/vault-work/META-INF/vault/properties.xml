@@ -4,7 +4,7 @@
 <comment>myTraining - UI config</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2025-03-29T10:37:16.145Z</entry>
+<entry key="created">2025-04-01T06:37:48.764Z</entry>
 <entry key="groupId">com.myTraining</entry>
 <entry key="name">myTraining.ui.config</entry>
 <entry key="description">UI config package for myTraining</entry>
